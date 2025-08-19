@@ -1,0 +1,11 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [Shared].[spTest]
+    @parameter_name AS INT
+AS
+BEGIN
+    SELECT * FROM [Shared].[TableTest];
+END
+GO
