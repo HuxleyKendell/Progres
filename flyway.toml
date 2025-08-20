@@ -20,7 +20,8 @@ mode = "default"
   usePlaceholders = true
 
   [flyway.placeholders]
-  schema = "Shared"
+  schema = "dbo"
+
 
 [flywayDesktop]
 developmentEnvironment = "development"
@@ -144,6 +145,7 @@ Schema = "Client2"
 [environments.Build]
 url = "jdbc:sqlserver://localhost;databaseName=MT_Build;encrypt=false;integratedSecurity=true;trustServerCertificate=true"
 defaultSchema = "Shared"
+schemas = [ "Shared" ]
 provisioner = "clean"
 
 [environments.Build.flyway.placeholders]
@@ -157,3 +159,11 @@ defaultSchema = "Shared"
 
 [environments.shadow.flyway.placeholders]
 Schema = "Shared"
+
+[environments.Client3]
+url = "jdbc:sqlserver://localhost;databaseName=MT_Prod;encrypt=false;integratedSecurity=true;trustServerCertificate=true"
+defaultSchema = "Client3"
+schemas = [ "Client3" ]
+
+[environments.Client3.flyway.placeholders]
+Schema = "Client3"
