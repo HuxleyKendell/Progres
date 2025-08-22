@@ -144,12 +144,8 @@ Schema = "Client2"
 
 [environments.Build]
 url = "jdbc:sqlserver://localhost;databaseName=MT_Build;encrypt=false;integratedSecurity=true;trustServerCertificate=true"
-defaultSchema = "Shared"
-schemas = [ "Shared" ]
 provisioner = "clean"
 
-[environments.Build.flyway.placeholders]
-Schema = "Shared"
 
 [environments.shadow]
 url = "jdbc:sqlserver://localhost;databaseName=MT_Shadow;encrypt=false;integratedSecurity=true;trustServerCertificate=true"
